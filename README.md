@@ -1,22 +1,14 @@
 # 🎮 Hand-Controlled Snake Game 🖐️🐍
 
-Welcome to the **Hand-Controlled Snake Game**! 🖐️✨ This is a fun game where you control the classic snake using only your hand gestures, thanks to the power of **MediaPipe** and **Pygame**. No need for a keyboard or mouse—just use your hand, and the snake moves! 🐍👋
+Welcome to the **Hand-Controlled Snake Game**! 🖐️✨ In this game, you control the classic snake using only your hand gestures, powered by **MediaPipe** and **Pygame**. No keyboard or mouse is needed—just your hand!
 
 ---
 
 ## ✨ Features
 
-- **Hand Tracking:** The game uses your hand to control the snake’s movement. Simply move your hand, and the snake follows! 🖐️➡️🐍
-- **Pygame Action:** Play on a Pygame-rendered screen where the snake gets longer as you eat food, and the game gets more intense! 🎮
-- **No Keyboard Needed:** Forget about arrow keys or WASD—just track your hand, and you're good to go! 🤯
+- **Hand Tracking**: Control the snake with your hand using the MediaPipe hand tracking API.
+- **Pygame**: Play the game on a Pygame-rendered screen with all the classic Snake action.
+- **No Keyboard Required**: Simply move your hand to control the snake’s movement!
 
 ---
 
-## 🚀 How to Run
-
-1. **Clone the Repo**:
-   Clone this repository to get started:
-
-   ```bash
-   git clone https://github.com/yourusername/hand-controlled-snake.git
-   cd hand-controlled-snake
