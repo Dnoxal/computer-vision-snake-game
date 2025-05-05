@@ -17,6 +17,7 @@ stop_capture = False  #
 def capture_hand():
     global index_x, index_y, initial_hand_detected, stop_capture
     cap = cv2.VideoCapture(0)
+    
     while not stop_capture:
         success, img = cap.read()
         if not success:
@@ -27,11 +28,11 @@ def capture_hand():
 
         if results.multi_hand_landmarks:
             initial_hand_detected = True
+            
             for hand_landmarks in results.multi_hand_landmarks:
                 h, w, _ = img.shape
                 index_x = int(hand_landmarks.landmark[8].x * w)  
                 index_y = int(hand_landmarks.landmark[8].y * h)
-                
                 min_x = min([lm.x for lm in hand_landmarks.landmark]) * w
                 min_y = min([lm.y for lm in hand_landmarks.landmark]) * h
                 max_x = max([lm.x for lm in hand_landmarks.landmark]) * w
@@ -82,6 +83,7 @@ def snake_game():
         foody = round(random.randrange(0, height - snake_block) / 20.0) * 20.0
 
         print("Waiting for hand...")
+        
         while not initial_hand_detected:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
@@ -104,6 +106,7 @@ def snake_game():
             dy = index_y - center_y
 
             threshold = 40  
+            
             if abs(dx) > abs(dy):
                 if dx > threshold:
                     x1_change = snake_block
